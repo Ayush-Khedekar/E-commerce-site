@@ -50,7 +50,7 @@ export default function ProductsContainer() {
           {(searchTerm ? filteredProducts : userProducts).length > 0 ? (
             (searchTerm ? filteredProducts : userProducts).map((product) => (
               <div
-                className="sm:w-[30%] w-full shadow-lg rounded-[10px] hover:scale-[1.02] mb-4 sm:h-[70vh] h-[60vh] mt-4 border-b-2 border-transparent transition-all duration-300 ease-in-out hover:border-b-blue-900 text-[0.8rem] hover:bg-cyan-200 hover:shadow-lg"
+                className="sm:w-[30%] w-full shadow-lg rounded-[10px] hover:scale-[1.02] mb-4 mt-4 border-b-2 border-transparent transition-all duration-300 ease-in-out hover:border-b-blue-900 text-[0.8rem] hover:bg-cyan-200 hover:shadow-lg"
                 key={product.id}
               >
                 <div className="flex gap-3 p-2">
