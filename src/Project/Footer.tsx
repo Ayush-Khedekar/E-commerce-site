@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <>
-      <main className="sm:text-[1rem] text-[0.6rem] gap-9 font-bold font-serif flex bg-cyan-300 p-5 sm:gap-70 justify-center">
+      <main className="sticky sm:text-[1rem] text-[0.6rem] gap-9 font-bold font-serif flex bg-cyan-300 p-5 sm:gap-70 justify-center">
         <div className="grid gap-2">
           {foot.map((item) => {
             return <li>{item}</li>;
@@ -30,7 +30,7 @@ export default function Footer() {
           })}
         </div>
       </main>
-      <div className="text-center bg-blue-600">
+      <div className="sticky text-center bg-blue-600">
         Copy right &copy; www.E-commerce.com | All rights reserved.
       </div>
     </>
