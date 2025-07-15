@@ -16,10 +16,17 @@ interface Rating {
   count: number;
 }
 
-export default function Card() {
-  const [userProducts, setUserProducts] = React.useState<products[]>([]);
+interface productProps {
+  userProducts: products[];
+  setUserProducts: React.Dispatch<React.SetStateAction<products[]>>;
+  product: products;
+}
 
-  return userProducts.map((product) => (
+export default function Card({
+  product,
+}: productProps) {
+
+  return (
     <div
       className="sm:w-[30%] w-full shadow-lg rounded-[10px] hover:scale-[1.02] mb-4 mt-4 border-b-2 border-transparent transition-all duration-300 ease-in-out hover:border-b-blue-900 text-[0.8rem] hover:bg-cyan-200 hover:shadow-lg"
       key={product.id}
@@ -58,5 +65,5 @@ export default function Card() {
         </div>
       </div>
     </div>
-  ));
+  );
 }
