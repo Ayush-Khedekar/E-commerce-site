@@ -13,9 +13,12 @@ export default function PurchaseButton() {
     setShowModal(false); 
   }
 
+  function undoPurchase() {
+    setIsPurchased(false)
+  }
   return (
     <>
-      <div>
+      <div className="flex gap-2">
         <button
           onClick={openModal}
           className={`w-full text-white text-xl p-2 rounded-[10px] items-center shadow-lg cursor-pointer ${
@@ -23,6 +26,14 @@ export default function PurchaseButton() {
           }`}
         >
           {isPurchased ? "Purchased" : "Purchase"}
+        </button>
+        <button
+          onClick={undoPurchase}
+          className={`w-[120%] text-white text-[1rem] rounded-[10px] items-center shadow-lg cursor-pointer ${
+            isPurchased ? "bg-red-600" : "bg-blue-600 hover:bg-green-600"
+          }`}
+        >
+          {isPurchased ? "Cancel-Purchase" : true}
         </button>
       </div>
 
